@@ -8,13 +8,13 @@ export class SwapiService {
 
   urlSwapi: string = 'https://swapi.dev/api/';
 
-  httpOptions = {
+  /*httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT'
     })
-  }
+  }*/
 
   constructor(
     private httpClient: HttpClient
