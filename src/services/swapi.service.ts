@@ -6,8 +6,8 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 })
 export class SwapiService {
 
-  //urlSwapi: string = 'https://swapi.dev/api/';
-  urlSwapi: string = 'https://www.swapi.tech/api/';
+  urlSwapi: string = 'https://swapi.dev/api/';
+  //urlSwapi: string = 'https://www.swapi.tech/api/';
 
   /*httpOptions = {
     headers: new HttpHeaders({

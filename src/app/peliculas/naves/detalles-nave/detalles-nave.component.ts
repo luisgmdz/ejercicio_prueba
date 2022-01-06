@@ -51,13 +51,13 @@ export class DetallesNaveComponent implements OnInit {
       }else {
         this.swapiSrv.getVehicle(this.idVehicle).then((res: any) => {
           // @ts-ignore
-          this.formVehicle.get('name').setValue(res.result.properties.name)
+          this.formVehicle.get('name').setValue(res.name)
           // @ts-ignore
-          this.formVehicle.get('manufacturer').setValue(res.result.properties.manufacturer)
+          this.formVehicle.get('manufacturer').setValue(res.manufacturer)
           // @ts-ignore
-          this.formVehicle.get('max_atmosphering_speed').setValue(res.result.properties.max_atmosphering_speed)
+          this.formVehicle.get('max_atmosphering_speed').setValue(res.max_atmosphering_speed)
           // @ts-ignore
-          this.formVehicle.get('vehicle_class').setValue(res.result.properties.vehicle_class)
+          this.formVehicle.get('vehicle_class').setValue(res.vehicle_class)
           // @ts-ignore
           this.formVehicle.get('uid')?.setValue(this.idVehicle)
         })

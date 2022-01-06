@@ -34,11 +34,11 @@ export class PeliculasComponent implements OnInit {
 
   ngOnInit(): void {
     this.swapiSrv.getFilms().then((res: any) => {
-      res.result.forEach((film: any) => {
-        this.films.push(film.properties)
+      res.results.forEach((film: any) => {
+        this.films.push(film)
       })
-      console.log('FILMS')
-      console.log(this.films)
+      //console.log('FILMS')
+      //console.log(this.films)
     })
   }
 

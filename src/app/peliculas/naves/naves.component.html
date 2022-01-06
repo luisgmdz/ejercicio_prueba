@@ -18,19 +18,19 @@
       </div>
     </div>
     <mat-divider style="background-color: black"></mat-divider>
-    <div class="vehicle" (click)="getVehicle(vehicle.uid)" fxLayout="row" fxFlex="100" *ngFor="let vehicle of vehicles">
+    <div class="vehicle" (click)="getVehicle(vehicle.url)" fxLayout="row" fxFlex="100" *ngFor="let vehicle of vehicles">
       <mat-divider style="background-color: gray"></mat-divider>
       <div class="data" fxLayout="row" fxFlex="25" fxLayoutAlign="start center">
-        {{vehicle.properties.name}}
+        {{vehicle.name}}
       </div>
       <div class="data" fxFlex="40" fxLayoutAlign="center center">
-        {{vehicle.properties.manufacturer}}
+        {{vehicle.manufacturer}}
       </div>
       <div class="data" fxFlex="15" fxLayoutAlign="center center">
-        {{vehicle.properties.max_atmosphering_speed}}
+        {{vehicle.max_atmosphering_speed}}
       </div>
       <div class="data" fxFlex="20" fxLayoutAlign="center center">
-        {{vehicle.properties.vehicle_class}}
+        {{vehicle.vehicle_class}}
       </div>
     </div>
   </div>

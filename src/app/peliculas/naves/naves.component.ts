@@ -25,9 +25,9 @@ export class NavesComponent implements OnInit {
     }).then(() => {
       return new Promise(async resolve => {
         return await this.swapiSrv.getVehiclesFromMovie(this.idMovie).then((res: any) => {
-          res.result.properties.vehicles.forEach((vehicle: any) => {
+          res.vehicles.forEach((vehicle: any) => {
             return this.swapiSrv.getAllVehiclesInf(vehicle).then((infoVehicle: any) => {
-              resolve(this.vehicles.push(infoVehicle.result))
+              resolve(this.vehicles.push(infoVehicle))
             })
           })
         })
@@ -36,7 +36,7 @@ export class NavesComponent implements OnInit {
   }
 
   getVehicle(uid: string) {
-    this.router.navigate(['peliculas/' + this.idMovie + '/naves/' + uid]);
+    this.router.navigate(['peliculas/' + this.idMovie + '/naves/' + uid.substring(31, uid.length-1)]);
   }
 
   return(){
