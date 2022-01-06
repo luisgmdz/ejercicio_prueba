@@ -1,1 +1,61 @@
-<p>detalles-nave works!</p>
+<div class="seccion" fxLayoutAlign="center center">
+  <p><b>Detalles del auto</b></p>
+</div>
+
+<div class="card">
+  <mat-card>
+    <div fxLayout="column">
+      <form [formGroup]="formVehicle">
+        <div fxLayout="column">
+          <div fxLayout="row" fxFlex="40" fxLayoutAlign="space-around center">
+            <div>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label style="color: aliceblue">Nombre</mat-label>
+                <input matInput MatFormFieldControl formControlName="name">
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label style="color: aliceblue">Fabricante</mat-label>
+                <input matInput MatFormFieldControl formControlName="manufacturer">
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row" fxFlex="40" fxLayoutAlign="space-around center">
+            <div>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label style="color: aliceblue">Velocidad</mat-label>
+                <input matInput MatFormFieldControl formControlName="max_atmosphering_speed">
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label style="color: aliceblue">Clase del vehiculo</mat-label>
+                <input matInput MatFormFieldControl formControlName="vehicle_class">
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div *ngIf="!exist" fxLayout="row" fxFlex="20" fxLayoutAlign="space-around center">
+        <div>
+          <button mat-raised-button color="warn" (click)="cancel()">Cancelar</button>
+        </div>
+        <div class="save">
+          <button mat-raised-button color="accent" (click)="saveVehicle(formVehicle.value)">Guardar</button>
+        </div>
+      </div>
+      <div *ngIf="exist" fxLayout="row" fxFlex="20" fxLayoutAlign="space-around center">
+        <div>
+          <button mat-raised-button color="accent" (click)="cancel()">Cancelar</button>
+        </div>
+        <div>
+          <button mat-raised-button (click)="delVehicle(this.idVehicle)" color="warn">Eliminar</button>
+        </div>
+        <div>
+          <button mat-raised-button color="accent" (click)="updateVehicle(formVehicle.value, this.idVehicle)">Actualizar</button>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>

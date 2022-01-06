@@ -1,1 +1,16 @@
-<router-outlet></router-outlet>
+<div class="peliculas" fxLayout="column">
+  <div fxLayout="row">
+    <mat-toolbar class="toolbar">
+      <div fxFlex="30">
+        <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/375px-Star_Wars_Logo.svg.png" (click)="home()">
+      </div>
+      <div fxFlex="40" fxLayoutAlign="center center">
+        <span><b>Prueba técnica - Advant</b></span>
+      </div>
+      <div fxFlex="30"></div>
+    </mat-toolbar>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

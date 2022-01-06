@@ -1,0 +1,25 @@
+.seccion {
+  margin-top: 4%;
+  font-family: Verdana;
+  font-size: xx-large;
+}
+
+.buttons{
+  text-decoration: none;
+  padding: 3px;
+  margin-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 100%;
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  border: 1px black;
+  cursor: pointer;
+}
+.vehicle:hover{
+  background-color: grey;
+  border-color: #1B2631;
+  text-decoration: none;
+  cursor: pointer;
+}

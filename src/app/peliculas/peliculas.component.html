@@ -1,2 +1,70 @@
-<p>peliculas works!</p>
-<router-outlet></router-outlet>
+<div class="seccion" fxLayoutAlign="center center">
+  <p><b>Lista de películas de star wars</b></p>
+</div>
+<div style="margin:5%">
+
+  <div fxLayout="column" fxFlex="100">
+    <div fxLayout="row" fxFlex="100">
+      <div fxFlex="40">
+        <b>Título</b>
+      </div>
+      <div fxFlex="20" fxLayoutAlign="center center">
+        <b>Episodio</b>
+      </div>
+      <div fxFlex="20" fxLayoutAlign="center center">
+        <b>Fecha</b>
+      </div>
+      <div fxFlex="20" fxLayoutAlign="center center">
+        <b>Ver naves</b>
+      </div>
+    </div>
+    <mat-divider style="background-color: black"></mat-divider>
+    <div fxLayout="row" fxFlex="100" *ngFor="let film of films">
+      <div class="data" fxLayout="row" fxFlex="40" fxLayoutAlign="start center">
+        {{film.title}}
+      </div>
+      <div class="data" fxFlex="20" fxLayoutAlign="center center">
+        {{film.episode_id}}
+      </div>
+      <div class="data" fxFlex="20" fxLayoutAlign="center center">
+        {{film.release_date}}
+      </div>
+      <div class="data" fxFlex="20" fxLayoutAlign="center center">
+        <div class="buttons" (click)="getNaves(film.episode_id)"><b>Naves</b></div>
+      </div>
+    </div>
+  </div>
+  <!--table mat-table [dataSource]="dataSource" fxFlex="100">
+
+
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre</th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="duracion">
+      <th mat-header-cell *matHeaderCellDef> Duración</th>
+      <td mat-cell *matCellDef="let element"> {{element.duracion}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="numNaves">
+      <th mat-header-cell *matHeaderCellDef> Número de naves</th>
+      <td mat-cell *matCellDef="let element"> {{element.numNaves}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="verNaves">
+      <th mat-header-cell *matHeaderCellDef> Ver naves</th>
+      <td mat-cell *matCellDef="let element"> {{element.numNaves}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table-->
+</div>
+
+
+
+
